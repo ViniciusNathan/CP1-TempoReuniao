@@ -9,11 +9,11 @@ function calcular() {
     let terminoHora = document.getElementById("horaFim")
     let terminoMinuto = document.getElementById("minFim")
 
-    //Guarda o dado em uma variavel Inicio e converte para float
+    //Guarda o dado em uma variavel Inicio e converte para Int
     let elementInicioHora = parseInt(inicioHora.value)
     let elementInicioMinutos = parseInt(inicioMinutos.value)
 
-    //Guarda o dado em uma variavel Termino e converte para float
+    //Guarda o dado em uma variavel Termino e converte para Int
     let elementTerminoHora = parseInt(terminoHora.value)
     let elementTerminoMinutos = parseInt(terminoMinuto.value)
 
@@ -55,17 +55,17 @@ function calcular() {
     let convertMinutos =  calcTempoMinutos - (convertHoras * 60)
 
     //Função para adicionar zero à esquerda
-    function padZero(num) {
+    function adicionarZero(num) {
         return num.toString().padStart(2, '0');
     }
 
     //Escreve Horas
     let trocaHoras = document.getElementById("horas")
-    trocaHoras.innerText = padZero(convertHoras)
+    trocaHoras.innerText = adicionarZero(convertHoras)
 
     //Escreve Minutos
     let trocaMinutos = document.getElementById("minutos")
-    trocaMinutos.innerText = padZero(convertMinutos)
+    trocaMinutos.innerText = adicionarZero(convertMinutos)
 
 }
 
